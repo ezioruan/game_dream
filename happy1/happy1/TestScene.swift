@@ -25,9 +25,52 @@ class TestSence: SKScene {
         backgroundColor = UIColor.blueColor()
         scaleMode = .AspectFill
         
-        let sprite = SKSpriteNode(fileNamed: "diao")
-        sprite?.position = CGPoint(x: 100, y: 100)
+        let texture = SKTexture(imageNamed: "diao")
         
-        addChild(sprite!)
+        let sprite = SKSpriteNode(texture: texture)
+        sprite.position = CGPoint(x: 200, y: 200)
+        sprite.name = "diao"
+        
+        
+        
+        let label = SKLabelNode(text: "click me to next scenc")
+        label.position =  CGPoint(x: 250, y: 500)
+        label.name = "label"
+        
+        
+        addChild(label)
+        
+        addChild(sprite)
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches{
+            let location = touch.locationInNode(self)
+            let node = nodeAtPoint(location)
+            print(node)
+            if (node.name == "diao"){
+                print("click in diao")
+                jumpToEzioScene()
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    func jumpToEzioScene(){
+        let crossFace = SKTransition.crossFadeWithDuration(0.5)
+        let ezioScene = EzioScene()
+        ezioScene.size = (view?.bounds.size)!
+        view?.presentScene(ezioScene, transition: crossFace)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 }

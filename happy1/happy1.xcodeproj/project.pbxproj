@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5125D2C71BD5D2F300570B29 /* TestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5125D2C61BD5D2F300570B29 /* TestScene.swift */; settings = {ASSET_TAGS = (); }; };
+		5125D2C91BD722D900570B29 /* EzioScenc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5125D2C81BD722D900570B29 /* EzioScenc.swift */; settings = {ASSET_TAGS = (); }; };
 		5175531B1BBA5B23005D3E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175531A1BBA5B23005D3E20 /* AppDelegate.swift */; };
 		5175531D1BBA5B23005D3E20 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5175531C1BBA5B23005D3E20 /* art.scnassets */; };
 		5175531F1BBA5B23005D3E20 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175531E1BBA5B23005D3E20 /* GameViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		5125D2C61BD5D2F300570B29 /* TestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScene.swift; sourceTree = "<group>"; };
+		5125D2C81BD722D900570B29 /* EzioScenc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzioScenc.swift; sourceTree = "<group>"; };
 		517553171BBA5B23005D3E20 /* happy1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happy1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5175531A1BBA5B23005D3E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5175531C1BBA5B23005D3E20 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				517553251BBA5B23005D3E20 /* LaunchScreen.storyboard */,
 				517553281BBA5B23005D3E20 /* Info.plist */,
 				5125D2C61BD5D2F300570B29 /* TestScene.swift */,
+				5125D2C81BD722D900570B29 /* EzioScenc.swift */,
 			);
 			path = happy1;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5175531F1BBA5B23005D3E20 /* GameViewController.swift in Sources */,
+				5125D2C91BD722D900570B29 /* EzioScenc.swift in Sources */,
 				5125D2C71BD5D2F300570B29 /* TestScene.swift in Sources */,
 				5175531B1BBA5B23005D3E20 /* AppDelegate.swift in Sources */,
 			);
