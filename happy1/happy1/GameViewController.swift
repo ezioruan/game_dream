@@ -20,11 +20,33 @@ class GameViewController: UIViewController {
             spriteView.showsFPS = true
             spriteView.showsNodeCount = true
             
-            let scence = TestSence()
-            scence.size = spriteView.bounds.size
-            spriteView.presentScene(scence)
+            
+            let buttons:Dictionary<String,UIButton> = ["TestScene":UIButton(),"PhysicsScene":UIButton()]
+            var buttonCount = 0
+            
+            
+            for (name,button) in buttons{
+                
+                button.setTitle(name, forState: .Normal)
+                button.frame = CGRectMake(20,CGFloat(100 * buttonCount),140,140)
+                button.backgroundColor = UIColor.blueColor()
+                button.addTarget(self, action: "onClick:", forControlEvents:.TouchUpInside)
+                view.addSubview(button)
+                buttonCount++
+                
+            }
+            
+            //let scence = TestSence()
+            //scence.size = spriteView.bounds.size
+            //spriteView.presentScene(scence)
             
         }
+    }
+    
+    func onClick(sender:AnyObject){
+        let button = sender as! UIButton
+        print("click in ",button.titleLabel)
+        
     }
     
     func handleTap(gestureRecognize: UIGestureRecognizer) {
