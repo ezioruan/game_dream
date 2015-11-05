@@ -35,7 +35,7 @@ class TestSence: SKScene {
         
         let label = SKLabelNode(text: "click me to next scenc")
         label.position =  CGPoint(x: 250, y: 500)
-        label.name = "label"
+        label.name = "diao"
         
         
         addChild(label)

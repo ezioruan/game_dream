@@ -12,6 +12,9 @@ import SceneKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    let buttons:Dictionary<String,UIButton> = ["TestScene":UIButton(),"PhysicsScene":UIButton()]
+    let scences:Dictionary<String,SKScene> = ["TestScene":TestSence(),"PhysicsScene":PhysicsScene()]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,6 @@ class GameViewController: UIViewController {
             spriteView.showsNodeCount = true
             
             
-            let buttons:Dictionary<String,UIButton> = ["TestScene":UIButton(),"PhysicsScene":UIButton()]
             var buttonCount = 0
             
             
@@ -37,7 +39,7 @@ class GameViewController: UIViewController {
             }
             
             //let scence = TestSence()
-            //scence.size = spriteView.bounds.size
+            //scence.size = spriteView.bounds.sizejjjuuuuu
             //spriteView.presentScene(scence)
             
         }
@@ -46,6 +48,13 @@ class GameViewController: UIViewController {
     func onClick(sender:AnyObject){
         let button = sender as! UIButton
         print("click in ",button.titleLabel)
+        if let scence = scences[(button.titleLabel?.text!)!]{
+            button.removeFromSuperview()
+            if let spriteView = self.view as? SKView {
+                scence.size = spriteView.bounds.size
+                spriteView.presentScene(scence)
+            }
+        }
         
     }
     
@@ -72,5 +81,5 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
 }
