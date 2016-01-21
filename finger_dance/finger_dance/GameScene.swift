@@ -25,6 +25,7 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.locationInNode(self)
             
+            
             //let sprite = SKSpriteNode(imageNamed:"Spaceship")
             
             let sprite =  SKShapeNode(rectOfSize: CGSize(width: 300, height: 100))
